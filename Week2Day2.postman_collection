@@ -1,0 +1,178 @@
+{
+  "info": {
+    "_postman_id": "be51ed66-b716-4556-b336-66ab5f5109d3",
+    "name": "GenAI-March-Home Work",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "4915234"
+  },
+  "item": [
+    {
+      "name": "S01 - DOM to Selenium Code-HW",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Extract the below given DOM : <textarea jsname=\\\"yZiJbe\\\" class=\\\"gLFyf\\\" aria-controls=\\\"Alh6id\\\" aria-owns=\\\"Alh6id\\\" autofocus=\\\"\\\" title=\\\"Search\\\" value=\\\"\\\" aria-label=\\\"Search\\\" placeholder=\\\"\\\" aria-autocomplete=\\\"both\\\" aria-expanded=\\\"false\\\" aria-haspopup=\\\"false\\\" autocapitalize=\\\"off\\\" autocomplete=\\\"off\\\" autocorrect=\\\"off\\\" id=\\\"APjFqb\\\" maxlength=\\\"2048\\\" name=\\\"q\\\" role=\\\"combobox\\\" rows=\\\"1\\\" spellcheck=\\\"false\\\" data-ved=\\\"0ahUKEwiU6MnFlOCTAxV2k1YBHadNEIYQ39UDCAs\\\"></textarea> and provide me the playwright python code. Instructions: Do not use ID if the value has number in it. Provide only python code and no explanations needed\"\n    }\n  ],\n  \"model\": \"meta-llama/llama-4-scout-17b-16e-instruct\",\n  \"temperature\": 0.1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.groq.com/openai/v1/chat/completions",
+          "protocol": "https",
+          "host": [
+            "api",
+            "groq",
+            "com"
+          ],
+          "path": [
+            "openai",
+            "v1",
+            "chat",
+            "completions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "S02 - TextFromImage-Url-HW",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"meta-llama/llama-4-scout-17b-16e-instruct\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": [\n        {\n          \"type\": \"text\",\n          \"text\": \"This is a image. Extract and return only the text exactly as shown, preserving case.\"\n        },\n        {\n          \"type\": \"image_url\",\n          \"image_url\": {\n            \"url\": \"https://assets.website-files.com/619340761ca096a589ca891f/63f4a0e505439072b18f8d1b_How%20is%20AI%20Driving%20the%20Future%20of%20Art%20with%20Text-to-Image%20Generation_.webp\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.groq.com/openai/v1/chat/completions",
+          "protocol": "https",
+          "host": [
+            "api",
+            "groq",
+            "com"
+          ],
+          "path": [
+            "openai",
+            "v1",
+            "chat",
+            "completions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "S03-WebSearch-HW",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"groq/compound-mini\",\n  \"messages\": [\n    {\n        \"role\": \"user\",\n      \"content\": \"Events in India for Mar 12 2020 --Only the events not related to Corona Virus or Covid for the date asked no probability or text and source from web with link no extrat text or markdown Give accurately with Web search no Halluciantion \"\n    }\n  ]\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.groq.com/openai/v1/chat/completions",
+          "protocol": "https",
+          "host": [
+            "api",
+            "groq",
+            "com"
+          ],
+          "path": [
+            "openai",
+            "v1",
+            "chat",
+            "completions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "S05- MultiLingual-HW",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"llama-3.3-70b-versatile\",\n  \"messages\": [\n    {\"role\": \"system\", \"content\": \"You are an Content Writer Specialist. Always respond in the same language as the user.\"},\n    {\"role\": \"user\", \"content\": \"इयं प्रोग्रामिंग् Language पायथन् कृते अस्ति । अस्माभिः python विषये लिखितव्यम् ।.\"}\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.groq.com/openai/v1/chat/completions",
+          "protocol": "https",
+          "host": [
+            "api",
+            "groq",
+            "com"
+          ],
+          "path": [
+            "openai",
+            "v1",
+            "chat",
+            "completions"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "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",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUri",
+      "value": ""
+    }
+  ]
+}
